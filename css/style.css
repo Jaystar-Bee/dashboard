@@ -282,6 +282,26 @@ body {
     .glass {
         flex-direction: column;
         width: 90%;
+        overflow-y: auto;
+    }
+
+    .games::-webkit-scrollbar {
+        display: none;
+        
+    }
+
+    .glass::-webkit-scrollbar {
+        width: 1.2rem;
+        background: rgba(
+            255, 255, 255, .2);
+        border-radius: 2rem;
+        height: 100%;
+        
+    }
+    .glass::-webkit-scrollbar-thumb {
+        background: var(--theme);
+        border-radius: 2rem;
+    
     }
     .items:hover, .items p {
         margin-left: 0;
@@ -289,14 +309,18 @@ body {
     .dashboard {
         flex-direction: row;
         justify-content: space-between;
-        margin: 0;
-        padding: 0;
+        /* margin: 0;
+        height: 5rem;
+        padding: 0; */
     }
     .profile {
         display: flex;
         align-items: center;
         font-size: 1.3rem;
+        /* margin: 0; */
         margin-left: 2rem;
+        /* padding: 0; */
+
     }
     .items img {
         width: 2rem;
@@ -312,6 +336,7 @@ body {
         display: flex;
         flex-direction: row;
         margin: 0 2rem;
+        padding: 0;
 
     }
     .items {
