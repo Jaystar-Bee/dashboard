@@ -41,9 +41,10 @@ body {
     z-index: 2;
     backdrop-filter: blur(.5rem);
     overflow: hidden;
+    overflow-y: auto;
     
 }
-.games::-webkit-scrollbar {
+.glass::-webkit-scrollbar {
     width: 1.2rem;
     background: rgba(
         255, 255, 255, .2);
@@ -51,7 +52,7 @@ body {
     height: 100%;
     
 }
-.games::-webkit-scrollbar-thumb {
+.glass::-webkit-scrollbar-thumb {
     background: var(--theme);
     border-radius: 2rem;
 
@@ -284,10 +285,8 @@ body {
         width: 90%;
         overflow-y: auto;
     }
-
-    .games::-webkit-scrollbar {
-        display: none;
-        
+    .games {
+        overflow: unset;
     }
 
     .glass::-webkit-scrollbar {
