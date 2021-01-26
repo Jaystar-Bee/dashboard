@@ -1,0 +1,219 @@
+:root {
+    --theme:  linear-gradient(to top right, #65dfc9, #6cdbeb);
+    --glass: linear-gradient(to left top, rgba(255, 255, 255, .3), rgba(255, 255, 255, .8))
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 13px;
+    color: #426696;
+}
+
+/* THE WHOLE SCREEN*/
+
+.main {
+
+    min-height: 100vh;
+    background: var(--theme);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.glass {
+    background: #fff;
+    width: 70%;
+    height: 80vh;
+    border-radius: 2rem;
+    background: var(--glass);
+    display: flex;
+    z-index: 2;
+    backdrop-filter: blur(.5rem);
+    overflow: hidden;
+    overflow-y: auto;
+}
+.glass::-webkit-scrollbar {
+    width: 1.2rem;
+    background: rgba(
+        255, 255, 255, .2);
+    border-radius: 2rem;
+    height: 100%;
+    
+}
+.glass::-webkit-scrollbar-thumb {
+    background: var(--theme);
+    border-radius: 2rem;
+
+}
+
+/*INNER GLASS CONTENT*/
+
+.avatar {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+}
+
+.dashboard {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    background: var(--glass);
+}
+
+.profile {
+}
+.item__lists {
+    padding-bottom: 1rem;
+}
+.items {
+    display: flex;
+    align-items: center;
+    margin: 1.2rem 0;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    backface-visibility: hidden;
+}
+.items img {
+    width: 2.5rem;
+    margin-right: 1rem;
+}
+.items:hover, .items p{
+    margin-left: 1rem;
+}
+
+.join {
+    background: var(--theme);
+    border-radius: 2rem;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0rem 1rem;
+}
+.join__text {
+    width: 30%;
+    font-weight: 600;
+    color: #fff;
+}
+.join img {
+    width: 7rem;
+}
+
+
+
+.games {
+    flex: 2;
+    margin: 0px 3rem;
+    display: flex;
+    flex-direction: column;
+}
+.active__heading h1{
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+.active__heading input {
+
+    border: none;
+    outline: none ;
+    background: var(--glass);
+    width: 50%;
+    padding: 1rem;
+    border-radius: 2rem;
+    color: inherit;
+    transition: all .3s ease-out;
+}
+.active__heading input:focus {
+    width: 55%;
+}
+.games__list {
+    display: flex;
+    margin-top: 5rem;
+    flex-direction: column;
+}
+.game__card {
+    display: flex; 
+    margin-bottom: 3rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: linear-gradient(to top left, rgba(255, 255, 255, .8), rgba(255, 255, 255, .2));
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: .2rem .2rem .5rem rgba(122, 122, 112, .5);
+    transition: all .3s ease-in-out;
+}
+
+.game__card *:not(:last-child) {
+    
+}
+.game__card:hover {
+    box-shadow: .2rem .4rem 1rem rgba(122, 122, 112, .5);
+}
+.game__card img{
+    width: 6.5rem;
+}
+.details {
+    flex: 1;
+    margin: 0 4rem ;
+}
+.details p {
+    margin-bottom: .5rem;
+}
+.radal {
+    width: 100%;
+    background: var(--theme);
+    border-radius: 2rem;
+    height: 20px;
+    position: relative;
+    overflow: hidden;
+}
+.radal::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    left: 40%;
+}
+
+
+
+
+
+
+
+
+.round1, 
+.round2 {
+    height: 20rem;
+    width: 20rem;
+    background: var(--glass);
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.round1 {
+    top: 2rem;
+    right: 13rem;
+}
+.round2 {
+    left: 12rem;
+    bottom: 1rem;
+}
+
