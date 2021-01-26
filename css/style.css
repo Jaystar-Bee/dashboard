@@ -41,9 +41,9 @@ body {
     z-index: 2;
     backdrop-filter: blur(.5rem);
     overflow: hidden;
-    overflow-y: auto;
+    
 }
-.glass::-webkit-scrollbar {
+.games::-webkit-scrollbar {
     width: 1.2rem;
     background: rgba(
         255, 255, 255, .2);
@@ -51,7 +51,7 @@ body {
     height: 100%;
     
 }
-.glass::-webkit-scrollbar-thumb {
+.games::-webkit-scrollbar-thumb {
     background: var(--theme);
     border-radius: 2rem;
 
@@ -70,7 +70,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100%;
+    height: 100% ;
     justify-content: space-evenly;
     text-align: center;
     padding: 2rem 0;
@@ -122,9 +122,12 @@ body {
 .games {
     flex: 2;
     margin: 0px 3rem;
+    margin-right: 0;
     display: flex;
     flex-direction: column;
     padding-top: 2rem;
+    overflow-y: auto;
+    padding-right: 5rem;
 }
  h1{
     font-size: 2.5rem;
