@@ -44,15 +44,15 @@ body {
     overflow-y: auto;
     
 }
-.glass::-webkit-scrollbar {
+.games::-webkit-scrollbar {
     width: 1.2rem;
     background: rgba(
-        255, 255, 255, .2);
+        255, 255, 255, .5);
     border-radius: 2rem;
     height: 100%;
     
 }
-.glass::-webkit-scrollbar-thumb {
+.games::-webkit-scrollbar-thumb {
     background: var(--theme);
     border-radius: 2rem;
 
